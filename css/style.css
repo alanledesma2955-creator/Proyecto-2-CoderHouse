@@ -1,0 +1,95 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    background-color: #F74843 ;
+}
+header p span{
+    display: block;
+}
+header .texto-header{
+    text-align: center;
+}
+header img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin: 10px;
+}
+main h1{
+    display: none;
+}
+main img{
+  grid-column: 1;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  align-items: center;
+}
+main a{
+  grid-column: 2;
+  text-align: center;
+}
+/*
+header {
+    background-color: rgb(20, 20, 20);
+    color: rgb(255, 105, 18);
+    text-align: center;
+}
+
+header img{
+
+}
+header nav {
+    color: white;
+}
+
+main {
+    background-color: rgb(81, 140, 192);
+    text-align: center;
+}
+
+main h1{
+    color:red;
+}
+
+.servicios-dis {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.productos {
+    text-align: center;
+}
+
+.quejas-dis { 
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.quejas-tit { 
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+footer {
+    text-align: center;
+    color: aliceblue;
+    background-color: black;
+}
+*/
