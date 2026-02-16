@@ -10,40 +10,77 @@
 header{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr;
     align-items: center;
-    background-color: #F74843 ;
+    background-color: #7f488a;
 }
 header p span{
     display: block;
 }
 header .texto-header{
     text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 header img {
     width: 100%;
     height: auto;
     object-fit: contain;
 }
+header .navbar{
+    grid-column: span 3;
+}
 
 main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    margin: 10px;
+    background-color: #131313;
 }
 main h1{
     display: none;
 }
 main img{
-  grid-column: 1;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  align-items: center;
+    grid-column: 1;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    align-items: center;
 }
 main a{
-  grid-column: 2;
-  text-align: center;
+    grid-column: 2;
+    text-align: center;
+    color: #F74843;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {
+    header{
+        margin-bottom: 10px;
+    }
+    main{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 30%);
+        column-gap: 1rem;
+    }
+
+    main .img-dos, main .img-cinco{
+        display: block;
+    }
+
+    main .img-uno, main .img-tres{
+        grid-row: span 2;
+    }
+    main .img-cuatro{
+        grid-column: auto;
+    }
+    main .img-cinco{
+        grid-column: span 3;
+    }
+
+    
 }
 /*
 header {
