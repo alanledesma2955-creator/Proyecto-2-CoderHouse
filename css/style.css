@@ -1,11 +1,12 @@
 
 
-
+/* reset */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* estilo mobile */
 
 header{
     display: grid;
@@ -42,10 +43,10 @@ main h1{
 }
 main img{
     grid-column: 1;
-    width: 100%;
+    width: 80%;
     aspect-ratio: 1 / 1;
     object-fit: contain;
-    align-items: center;
+    justify-self: center;
 }
 main a{
     grid-column: 2;
@@ -56,77 +57,47 @@ main a{
     font-weight: bold;
 }
 
-@media screen and (min-width: 1024px) {
+    /* estilo desktop y pc */
+
+@media (min-width: 768px){
     header{
-        margin-bottom: 10px;
+        padding: 10px 40px;
+        align-items: center;
     }
+
+    header img {
+        width: 60%;
+        justify-self: center;
+    }
+
     main{
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 30%);
-        column-gap: 1rem;
     }
-
-    main .img-dos, main .img-cinco{
+    main h1{
         display: block;
+        text-align: center;
+        color: #F74843;
+        padding: 20px;
     }
-
-    main .img-uno, main .img-tres{
-        grid-row: span 2;
-    }
-    main .img-cuatro{
-        grid-column: auto;
-    }
-    main .img-cinco{
+    .bienvenidos-main {
         grid-column: span 3;
     }
+    main img:nth-of-type(1) { grid-column: 1; grid-row: 2; }
+    main img:nth-of-type(2) { grid-column: 2; grid-row: 2; }
+    main img:nth-of-type(3) { grid-column: 3; grid-row: 2; }
 
-    
+    main a:nth-of-type(1) { grid-column: 1; grid-row: 3; }
+    main a:nth-of-type(2) { grid-column: 2; grid-row: 3; }
+    main a:nth-of-type(3) { grid-column: 3; grid-row: 3; }
+
+    main a{
+    text-align: center;
+    }
 }
-/*
-header {
-    background-color: rgb(20, 20, 20);
-    color: rgb(255, 105, 18);
+
+
+footer{
+    background-color: #000000;
+    color: whitesmoke;
     text-align: center;
 }
-
-header img{
-
-}
-header nav {
-    color: white;
-}
-
-main {
-    background-color: rgb(81, 140, 192);
-    text-align: center;
-}
-
-main h1{
-    color:red;
-}
-
-.servicios-dis {
-    text-align: center;
-    color: rgb(255, 255, 255);
-}
-
-.productos {
-    text-align: center;
-}
-
-.quejas-dis { 
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-
-.quejas-tit { 
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-
-footer {
-    text-align: center;
-    color: aliceblue;
-    background-color: black;
-}
-*/
