@@ -7,6 +7,16 @@
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
 
 /* estilo mobile de la pagina principal (index) */
 
@@ -15,6 +25,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #131313;
 }
 
 header {
@@ -25,6 +36,7 @@ header {
         "izq2 centro2 der2"
         "nav nav nav";
     background-color: #7f488a;
+    padding: 10px
 }
 
 .secret {
@@ -39,13 +51,11 @@ header {
 .logo-principal {
     grid-area: izq2;
     grid-row: span 2;
-    padding: 5px;
 }
 
 .logo-mobile {
     grid-area: der;
     grid-row: span 2;
-    padding: 5px;
 }
 
 header nav {
@@ -58,7 +68,7 @@ header nav {
     flex-direction: column;
     align-items: center;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 
@@ -78,8 +88,8 @@ header img {
 
 
 .main-index {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: #131313;
 }
@@ -97,7 +107,7 @@ main h1 {
     width: 50%;
     aspect-ratio: 1;
     object-fit: contain;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 .main-index div a {
@@ -107,8 +117,31 @@ main h1 {
     width: 50%;
     text-decoration: none;
     color: #F74843;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
+}
+
+.main-servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #131313;
+    padding-bottom: 2.5rem;
+}
+
+.h1-servicios {
+    display: flex;
+    color: #F74843;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem;
+}
+
+.servicios-dis {
+    display: flex;
+    color: whitesmoke;
+    width: 80%;
+    text-align: center;
 }
 
 footer {
@@ -120,18 +153,15 @@ footer {
 }
 
 
-/* estilo tablet y desktop*/
+/* estilo tablet*/
 
 @media (min-width: 768px) {
     header {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
             "izq centro der"
             "nav nav nav";
         align-items: center;
-        background-color: #7f488a;
-        padding: 10px;
+        padding: 15px;
     }
 
     .logo-principal {
@@ -140,63 +170,73 @@ footer {
 
     .secret {
         grid-area: izq;
-        display: flex;
     }
 
     .shop {
         grid-area: der;
-        display: flex;
     }
 
     .logo-mobile {
         display: none;
     }
 
-    .textos-header {
-        display: none;
-    }
-
     .secret,
     .shop {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-weight: bold;
+        font-size: 2.8rem;
+    }
+
+    .main-index div img {
+        aspect-ratio: 1.5;
+        padding-left: 50px;
+    }
+
+    .main-index div a {
+        font-size: 2.5rem;
+    }
+
+    .h1-servicios {
         font-size: 3rem;
     }
 
-    @media (min-width: 1024px) {
-        header {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-areas:
-                "izq centro der"
-                "nav nav nav";
-            align-items: center;
-            background-color: #7f488a;
-            padding: 10px;
-        }
-
-        .logo-principal {
-            grid-area: centro;
-        }
-
-        .secret {
-            grid-area: izq;
-            display: flex;
-        }
-
-        .shop {
-            grid-area: der;
-            display: flex;
-        }
-
-        .logo-mobile {
-            display: none;
-        }
-
-        .textos-header {
-            display: none;
-        }
-
+    .servicios-dis {
+        font-size: 1.3rem;
     }
+}
+
+/* estilo desktop de pagina principal, servicios, productos y quejas */
+
+@media (min-width: 1024px) {
+
+    header img {
+        width: 40%;
+        aspect-ratio: 1;
+        object-fit: contain;
+    }
+
+    .main-index {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        background-color: #131313;
+        padding-top: 3rem;
+    }
+
+    .main-index div {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+    }
+
+    .main-index div img {
+        width: 50%;
+        aspect-ratio: 1;
+        object-fit: contain;
+        padding-left: 0px;
+    }
+
+    .main-index div a {
+        height: 10rem;
+    }
+
+
+}
